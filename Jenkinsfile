@@ -9,8 +9,8 @@ node{
 		sh "./mvnw test"
 	}
 
-	stage("Build"){
-		println "je veux faire du build"
+	stage("Build Docker Image"){
+		sh "sudo docker build -t pipeline-demo ."
 	}
 
 
