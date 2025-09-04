@@ -9,6 +9,14 @@ node("ci-node"){
 		sh "./mvnw test"
 	}
 
+	stage("Quality Analyses"){
+		sh "./mvnw clean verify sonar:sonar \
+  			-Dsonar.projectKey=pipeline-demo \
+  			-Dsonar.projectName='pipeline-demo' \
+  			-Dsonar.host.url=http://13.39.24.127:9000 \
+  			-Dsonar.token=sqp_5c8049bd2dab841ab7bd2172b299a0b18f635109"
+	}
+
 	stage("Build Docker Image"){
 		sh "sudo docker build -t mchekini/pipeline-demo:1.0 ."
 	}
