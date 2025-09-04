@@ -26,9 +26,9 @@ node("ci-node"){
 			try{
 				sh "sudo docker stop pipeline-demo"
 				sh "sudo docker rm pipeline-demo"
-				sh "sudo docker run --name pipeline-demo -p 8080:8080 -d mchekini/pipeline-demo:1.0"
+				sh "sudo docker run --pull always --name pipeline-demo -p 8080:8080 -d mchekini/pipeline-demo:1.0"
 			} catch (Exception e){
-				sh "sudo docker run --name pipeline-demo -p 8080:8080 -d mchekini/pipeline-demo:1.0"
+				sh "sudo docker run --pull always --name pipeline-demo -p 8080:8080 -d mchekini/pipeline-demo:1.0"
 			}
 		}
 	}
