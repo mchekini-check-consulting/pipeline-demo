@@ -1,4 +1,4 @@
-node{
+node("ci-node"){
 
 
 	stage("Checkout"){
@@ -10,7 +10,7 @@ node{
 	}
 
 	stage("Build Docker Image"){
-		sh "docker build -t pipeline-demo ."
+		sh "sudo docker build -t pipeline-demo ."
 	}
 
 
