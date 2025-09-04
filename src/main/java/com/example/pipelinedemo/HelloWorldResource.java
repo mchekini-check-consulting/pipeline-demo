@@ -9,6 +9,6 @@ public class HelloWorldResource {
 
     @GetMapping
     public String helloWorld() {
-        return "Hello World updated v1";
+        return "Hello World updated v2";
     }
 }
