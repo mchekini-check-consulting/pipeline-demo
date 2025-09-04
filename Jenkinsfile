@@ -2,7 +2,7 @@ node{
 
 
 	stage("Checkout"){
-		println "checkout operation will started dans quelques minutes"
+		checkout(scm)
 	}
 
 	stage("Build"){
