@@ -8,6 +8,6 @@ public class MyFirsttest {
 
     @Test
     public void itShouldBeOk() {
-        Assertions.assertEquals(2, 2);
+        Assertions.assertEquals(2, 3);
     }
 }
