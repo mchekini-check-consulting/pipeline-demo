@@ -10,7 +10,7 @@ node{
 	}
 
 	stage("Build Docker Image"){
-		sh "sudo docker build -t pipeline-demo ."
+		sh "docker build -t pipeline-demo ."
 	}
 
 
