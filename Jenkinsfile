@@ -17,7 +17,7 @@ node("ci-node"){
 		withCredentials([usernamePassword(credentialsId: 'docker-credentials', passwordVariable: 'password', usernameVariable: 'username')]) {
 			sh "sudo docker login -u $username -p $password"
 			sh "sudo docker push mchekini/pipeline-demo:1.0"
-			sh "sudo rmi mchekini/pipeline-demo:1.0"
+			sh "sudo docker rmi mchekini/pipeline-demo:1.0"
         }
 	}
 
