@@ -3,11 +3,11 @@ package com.example.pipelinedemo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class MyFirsttest {
+class MyFirstTests {
 
 
     @Test
-    public void itShouldBeOk() {
+    void itShouldBeOk() {
         Assertions.assertEquals(2, 3);
     }
 }
